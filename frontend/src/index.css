@@ -1,0 +1,1027 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+
+/* all pages */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(57, 54, 70);
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+  display: none;
+}
+
+/* authentication */
+#sign-in-page {
+  background-image: url("./assets/bg.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 700px;
+}
+
+#dashboard {
+  background-color: #f4eee0;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 700px;
+}
+
+#nav-ul li {
+  color: #f4eee0;
+  text-decoration: none;
+}
+
+#nav-div {
+  background-color: rgb(57, 54, 70);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+#nav-logo {
+  background-image: url("./assets/logo-light.png");
+  background-size: cover;
+  min-height: 100px;
+  min-width: 100px;
+  height: 50%;
+}
+
+#nav-ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+#nav-ul li {
+  transition: all 0.3s ease 0s;
+}
+
+#nav-ul li:hover {
+  color: rgba(109, 93, 110, 1);
+}
+
+#logout-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: #f4eee0;
+  font-size: 12px;
+  /* padding: 9px 25px; */
+  background-color: rgba(109, 93, 110, 1);
+  border: none;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#return-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: #f4eee0;
+  font-size: 12px;
+  background-color: rgb(255, 59, 59);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#approve-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: #f4eee0;
+  font-size: 12px;
+  background-color: rgb(28, 227, 28);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#return-button:hover {
+  background-color: rgba(167, 17, 17, 1);
+}
+
+
+#approve-button:hover {
+  background-color: rgb(24, 163, 24, 1);
+}
+
+
+#dropdown-button:hover,
+#pdf-button:hover,
+#logout-button:hover,
+#login-button:hover,
+#signup-button:hover {
+  background-color: rgba(109, 93, 110, 0.6);
+}
+
+#pdf-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 150px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: #F4EEE0;
+  font-size: 12px;
+  background-color: rgba(109, 93, 110, 1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#pdf-div {
+  padding: 00px 50px;
+  font-size: large;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#sign-in-div {
+  display: flex;
+  flex-direction: column;
+  border-radius: 45px;
+  background-color: rgba(244, 238, 224, 0.9);
+  height: 80%;
+  width: 400px;
+  align-items: center;
+  box-shadow: 3px 3px 20px;
+  animation: fadeIn 0.5s;
+}
+
+#create-approver-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #F4EEE0;
+  height: 88%;
+  width: 400px;
+  align-items: center;
+  box-shadow: 0px 0px 2px;
+  margin: 20px;
+  margin-top: 18px;
+  margin-left: 0px;
+}
+
+#log-in-div {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+#sign-in-logo-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  justify-content: center;
+}
+
+#sign-in-logo {
+  background-image: url("./assets/logo-dark.png");
+  background-size: cover;
+  min-height: 240px;
+  min-width: 240px;
+  margin-top: 25%;
+}
+
+#log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+#authentication-input-div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+#l-email,
+#l-password,
+#s-email,
+#s-password,
+#s-firstname,
+#s-middlename,
+#s-lastname,
+#s-stdnum {
+  font-size: 15px;
+  margin: 10px;
+  width: 300px;
+  padding-left: 10px;
+  border-radius: 25px;
+  min-height: 35px;
+  font-size: 13px;
+}
+
+#approver-email,
+#approver-password,
+#approver-firstname,
+#approver-middlename,
+#approver-lastname {
+  font-size: 15px;
+  margin: 10px;
+  width: 300px;
+  padding-left: 10px;
+  border-radius: 25px;
+  min-height: 35px;
+  font-size: 13px;
+}
+
+#login-button {
+  background-color: rgb(109, 93, 110);
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+}
+
+#signup-button {
+  background-color: rgb(109, 93, 110);
+  width: 100px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+#createaccount-button {
+  background-color: rgb(109, 93, 110);
+  width: 120px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 45px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease 0s;
+}
+
+#authentication-back-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  color: rgb(109, 93, 110);
+  font-size: 12px;
+}
+
+#authentication-tosignup-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  color: rgb(109, 93, 110);
+  font-size: 12px;
+}
+
+#authentication-tosignupback-button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#approver-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#sign-up-text {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  height: 22%;
+}
+
+
+#s-form-eye {
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+}
+
+#l-form-eye {
+  display: flex;
+  flex-direction: row;
+}
+
+#s-eye {
+  margin-top: 86%;
+  margin-left: -12%;
+  width: 0;
+}
+
+#s2-eye {
+  margin-top: 36%;
+  margin-left: -12%;
+  width: 0;
+}
+
+#l-eye {
+  width: 0;
+  margin-top: -7%;
+  margin-left: -12%;
+}
+
+/* dashboard */
+#dashboard {
+  position: fixed;
+  background-color: #F4EEE0;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  min-height: 700px;
+}
+
+#nav-ul li {
+  color: #F4EEE0;
+  text-decoration: none;
+}
+
+#nav-div {
+  width: 100%;
+  background-color: rgb(57, 54, 70);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  min-height: 150px;
+  max-height: 150px;
+  background-image: url("./assets/bg.png");
+  background-size: auto 450px;
+  /* border-bottom: solid;
+    border-width: 1pxx; */
+}
+
+#nav-logo {
+  background-image: url("./assets/logo-light.png");
+  background-size: cover;
+  min-height: 100px;
+  min-width: 100px;
+  height: 50%;
+}
+
+#nav-ul li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+#nav-ul li {
+  transition: all 0.3s ease 0s;
+}
+
+#nav-ul li:hover {
+  color: rgba(109, 93, 110, 1);
+}
+
+#logout-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 30px;
+  border-radius: 20px;
+  color: #F4EEE0;
+  font-size: 12px;
+  /* padding: 9px 25px; */
+  background-color: rgba(109, 93, 110, 1);
+  border: none;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#logout-button:hover,
+#login-button:hover,
+#signup-button:hover {
+  background-color: rgba(109, 93, 110, 0.6);
+}
+
+/* home */
+#welcome {
+  display: flex;
+  height: calc(100vh - 150px);
+  width: 100vw;
+  overflow: auto;
+  animation: fadeIn 0.5s;
+}
+
+#welcome-image {
+  min-width: 40%;
+  min-height: 700px;
+  background-image: url("./assets/logo-dark.png");
+  background-size: 750px;
+  background-repeat: no-repeat;
+  background-position: -4vw -26vh;
+}
+
+#welcome-text-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 60%;
+  min-height: 700px;
+}
+
+#welcome-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  display: flex;
+  word-wrap: break-word;
+  height: 30%;
+  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
+  font-size: 25px;
+  color: rgba(109, 93, 110, 1);
+  animation: fadeIn 0.5s;
+}
+
+#welcome-info {
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 50px;
+  display: flex;
+  word-wrap: break-word;
+  width: 100%;
+  height: 70%;
+  font-size: 18px;
+  color: rgba(109, 93, 110, 1);
+  text-align: justify;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#notifications {
+  display: flex;
+  flex-direction: column;
+  min-width: 50px;
+  max-width: 50px;
+  margin-top: 25px;
+  padding-left: 30px;
+  animation: fadeIn 0.3s;
+}
+
+#notif {
+  display: flex;
+  min-width: 180px;
+  max-width: 180px;
+  min-height: 20px;
+  margin-top: 15px;
+  margin-left: -30px;
+  margin-bottom: -10px;
+  background-color: rgb(249, 241, 222);
+  border-radius: 20px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(57, 54, 70, 0.9);
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+#right-side-dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+/* admin */
+#approve {
+  background-color: rgb(37, 222, 37);
+}
+
+#reject {
+  background-color: rgb(245, 12, 12);
+}
+
+/* student application process */
+#sap-body {
+  display: flex;
+  flex-direction: row;
+  color: rgb(57, 54, 70);
+  font-size: 15px;
+  background-color: #f8ecd0;
+  background-image: url("./assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 120px center;
+  background-blend-mode: screen;
+  animation: fadeIn 0.5s;
+}
+
+#sap-app-list {
+  margin-left: 20px;
+  width: 15vw;
+  height: calc(100vh - 150px);
+  min-width: 182px;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  padding-bottom: 3vh;
+}
+
+#sap-app-list-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 14px;
+  font-size: 15px;
+  font-weight: bold;
+  min-height: 50px;
+}
+
+#sap-app-list-items {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.sap-app-list-items-row {
+  display: flex;
+}
+
+.sap-app-list-items-row-id {
+  display: flex;
+  width: 94%;
+  min-width: 70px;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.2);
+  border-width: 1px;
+  border-left: none;
+  border-right: none;
+  padding-right: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  word-break: break-word;
+  align-items: center;
+}
+
+.sap-app-list-items-row-step {
+  display: flex;
+  width: 10%;
+  min-width: 65px;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.1);
+  border-width: 1px;
+  border-left: none;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  word-break: break-word;
+  align-items: center;
+}
+
+.sap-app-list-items-row-status {
+  display: flex;
+  width: 35%;
+  min-width: 70px;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.1);
+  border-width: 1px;
+  border-left: none;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  word-break: break-word;
+  align-items: center;
+}
+
+.sap-app-list-items-row-buffer {
+  width: 17px;
+  min-width: 17px;
+}
+
+/* Application View */
+#sap-app-list-view {
+  width: 32vw;
+  height: 85vh;
+}
+
+#sap-app-list-view-inner-div {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(57, 54, 70, 0.3);
+  border-radius: 20px;
+  width: 94.5%;
+  height: 77.5vh;
+  background-color: #F4EEE0;
+  padding: 10px;
+  margin: 10px;
+  min-height: 540px;
+}
+
+.sap-app-list-view-info {
+  border-radius: 10px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(57, 54, 70, 0.3);
+  background-color: #fffbf1;
+  padding: 10px;
+}
+
+/* Application Process */
+#sap-app-process {
+  width: 53vw;
+  height: 85vh;
+  min-width: 300px;
+  min-height: 200px;
+  margin-left: -15px;
+  padding-left: 4px;
+}
+
+#sap-app-process-inner-div-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  /* background-color: rebeccapurple; */
+}
+
+#sap-app-process-open-application-button {
+  border-radius: 50px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ffd87e;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.3);
+  border-width: 1px;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#sap-app-process-inner-div-process {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+#sap-app-process-inner-div-process-title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.3);
+  border-width: 1px;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 10px;
+  background-color: #F4EEE0;
+  border-radius: 20px;
+}
+
+.sap-app-process-inner-div-process-title-info {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#sap-app-process-inner-div-process-title-info-circlestat {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+}
+
+#sap-app-process-inner-div-process-title-status {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.sap-app-process-inner-div-process-application-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 13px;
+  background-color: #ffd87e;
+  border-radius: 50px;
+  border: solid;
+  border-color: rgba(57, 54, 70, 0.3);
+  border-width: 1px;
+  width: 120px;
+  min-width: 44px;
+  height: 25px;
+}
+
+.sap-app-process-inner-div-process-application-button:hover {
+  background-color: #e0c588;
+}
+
+#sap-app-process-inner-div-process-content {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(57, 54, 70, 0.3);
+  border-radius: 20px;
+  margin-top: 10px;
+  /* margin-bottom: 30px; */
+  background-color: #F4EEE0;
+  padding: 10px;
+  height: 65.5vh;
+  min-height: 440px;
+}
+
+.sap-app-process-inner-div-process-content-input {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.sap-app-process-inner-div-process-content-input-textarea {
+  width: 100%;
+  height: 18vh;
+  min-height: 80px;
+  resize: none;
+  padding: 10px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  background-color: #fffbf1;
+}
+
+.sap-app-process-inner-div-process-content-input-textarea::placeholder {
+  font-size: 14px;
+  color: rgba(109, 93, 110, 0.7);
+}
+
+#sap-app-process-inner-div-process-application-button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  height: 13.5vh;
+}
+
+
+.application-table {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 20px;
+}
+
+table {
+  border: 2px solid forestgreen;
+  width: 800px;
+  height: 200px;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+#select-adviser {
+  width: 250px;
+}
+
+#approvers-table {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+}
+
+#table_form {
+  display: flex;
+  flex-direction: row;
+}
+
+#approver {
+  padding: 10px;
+  background-color: rgb(203, 175, 138);
+  border-radius: 5px;
+}
+
+#approver-list-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 70%;
+}
+
+#approver-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#approver {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+#left-panel-approver {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: rgb(255, 235, 210);
+}
+
+#account-application-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#application-for-approver {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#csv-uploader-div {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  align-items: start;
+  margin-left: 10vw;
+}
+
+#upload-csv-button {
+  background-color: rgba(109, 93, 110, 1);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid gray;
+  transition: all 0.3s ease 0s;
+}
+
+#createaccount-button:hover,
+#upload-csv-button:hover {
+  background-color: rgb(69, 59, 69)
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#file-upload {
+  border: 1px solid gray;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: rgb(249, 241, 222);
+  transition: all 0.3s ease 0s;
+}
+
+#file-upload:hover {
+  background-color: rgb(203, 196, 179);
+}
+
+#selected-file-name {
+  font-weight: bold;
+  color: red;
+}
+
+#csv-upload-title {
+  font-weight: bold;
+  color: black;
+  font-size: large;
+}
+
+
+#dropdown-button {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  min-height: 40px;
+  border-radius: 20px;
+  color: #f4eee0;
+  font-size: 12px;
+  /* padding: 9px 25px; */
+  background-color: rgba(109, 93, 110, 1);
+  border: none;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#delete-user-button {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  gap: .7em;
+  min-height: 40px;
+  border-radius: 20px;
+  color: #f4eee0;
+  font-size: 15px;
+  background-color: rgba(109, 93, 110, 1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+#delete-user-button:hover {
+  background-color: rgb(255, 28, 28);
+}
+
+#assign-adviser {
+  width: 150px;
+  height: 30px;
+  padding-left: 8px;
+  border-radius: 10px;
+}
+
+.page {
+  animation: fadeIn 0.5s;
+}
